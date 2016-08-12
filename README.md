@@ -1,0 +1,1 @@
+# uwsgi-stat-server-extension
