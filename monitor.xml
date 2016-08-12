@@ -1,0 +1,18 @@
+<monitor>
+    <name>uWSGI Monitor</name>
+    <type>managed</type>
+    <description>Monitor uWSGI processes</description>
+    <monitor-configuration>
+    </monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style>
+        <name>Run</name>
+        <type>executable</type>
+        <task-arguments>
+        </task-arguments>
+        <executable-task>
+            <type>file</type>
+            <file>read-from-uWSGI-stats-server.sh</file>
+        </executable-task>
+    </monitor-run-task>
+</monitor>
