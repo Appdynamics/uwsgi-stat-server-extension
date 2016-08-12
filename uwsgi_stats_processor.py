@@ -101,13 +101,13 @@ class uWSGIWorker:
 
     def get_metrics(self):
         return "\n".join([
-            "%s|%s|Total Requests, value=%d" % (APPD_METRIC_TEMPLATE, self.pid, self.requests),
-            "%s|%s|Harakiri Count, value=%d" % (APPD_METRIC_TEMPLATE, self.pid, self.harakiri_count),
-            "%s|%s|Total Exceptions, value=%d" % (APPD_METRIC_TEMPLATE, self.pid, self.exceptions),
-            "%s|%s|Total Running Time (s), value=%d" % (APPD_METRIC_TEMPLATE, self.pid, (self.running_time/1000)),
-            "%s|%s|Total Transmitted Data (MB), value=%d" % (APPD_METRIC_TEMPLATE, self.pid, (self.transmitted_data/(1024*1024))),
-            "%s|%s|Respawn Count, value=%d" % (APPD_METRIC_TEMPLATE, self.pid, self.respawn_count),
-            "%s|%s|Average Response Time (s), value=%d" % (APPD_METRIC_TEMPLATE, self.pid, (self.average_response_time/1000)),
+            "%s|%s|Total Requests, value=%d" % (APPD_METRIC_TEMPLATE, self.id, self.requests),
+            "%s|%s|Harakiri Count, value=%d" % (APPD_METRIC_TEMPLATE, self.id, self.harakiri_count),
+            "%s|%s|Total Exceptions, value=%d" % (APPD_METRIC_TEMPLATE, self.id, self.exceptions),
+            "%s|%s|Total Running Time (s), value=%d" % (APPD_METRIC_TEMPLATE, self.id, (self.running_time/1000)),
+            "%s|%s|Total Transmitted Data (MB), value=%d" % (APPD_METRIC_TEMPLATE, self.id, (self.transmitted_data/(1024*1024))),
+            "%s|%s|Respawn Count, value=%d" % (APPD_METRIC_TEMPLATE, self.id, self.respawn_count),
+            "%s|%s|Average Response Time (s), value=%d" % (APPD_METRIC_TEMPLATE, self.id, (self.average_response_time/1000)),
         ])
 
 
