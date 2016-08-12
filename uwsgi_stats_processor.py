@@ -17,7 +17,7 @@ class uWSGIStatsProcessor:
 
     def __init__(self):
         self.s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-        self.s.connect(self.WSGI_STATS_SERVER_SOCKET_PATH)
+        self.s.connect(WSGI_STATS_SERVER_SOCKET_PATH)
 
     def read_from_socket(self):
         chunks = []
