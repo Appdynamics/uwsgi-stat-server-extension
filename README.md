@@ -10,8 +10,9 @@ This extension only works with standalone Machine Agent.
 
 ##Installation
 1. Clone this repository into your Machine Agent installation directory - \<machine_agent_dir\>/monitors/
-2. Configure `WSGI_STATS_SERVER_SOCKET_PATH` to point to the socket that the uWSGI Sats Server is writing to.
-3. Restart the Machine Agent.
+2. `chmod +x` \<machine_agent_dir\>/monitors/uwsgi-stat-server-extension/read-from-uWSGI-stats-server.sh
+3. If needed, update `WSGI_STATS_SERVER_SOCKET_PATH` to point to the socket that the uWSGI Sats Server is writing to.
+4. Restart the Machine Agent.
 
 ##Configuration
 | Param | Description |
